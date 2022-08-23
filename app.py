@@ -1,6 +1,6 @@
 import os
 from aws_cdk import App, Environment
-from cdk_playground_py.main import MyStack
+from cdk_playground_py.idempotency import IdempotencyStack
 
 # for development, use account/region from cdk cli
 dev_env = Environment(
@@ -9,7 +9,6 @@ dev_env = Environment(
 )
 
 app = App()
-MyStack(app, "cdk-playground-py-dev", env=dev_env)
-# MyStack(app, "cdk-playground-py-prod", env=prod_env)
+IdempotencyStack(app, "idempotency-py", env=dev_env)
 
 app.synth()

@@ -11,6 +11,10 @@
       "type": "runtime"
     },
     {
+      "name": "aws-lambda-powertools",
+      "type": "runtime"
+    },
+    {
       "name": "constructs",
       "version": "^10.0.5",
       "type": "runtime"
